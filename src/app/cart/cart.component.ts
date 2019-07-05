@@ -7,10 +7,12 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items;
+  total;
   constructor(
     private cartService: CartService
   ) {
       this.items = this.cartService.getItems();
+      this.total = this.cartService.getTotal();
   }
 
 

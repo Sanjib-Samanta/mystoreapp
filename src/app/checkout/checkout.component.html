@@ -1,6 +1,6 @@
 <h3>Confirm and Purchase</h3>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<form [formGroup]="checkOutForm" (ngSubmit)="onSubmit(checkOutForm.value)">
 
     <div>
       <label>Name</label>
@@ -15,4 +15,10 @@
     <button class="button" type="submit">Purchase</button>
 
   </form>
-
+ <div *ngIf="success">
+   <p>Congratulation!! Your order has been placed.</p>
+  <div class="cart-item"  *ngFor="let item of items">
+      <span>{{ item.Name }}</span>
+      <span>{{ item.Price | currency }}</span>
+  </div>
+</div>

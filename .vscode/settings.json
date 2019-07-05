@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ccd17677-0744-4717-be23-f9960dfcfb51/resourceGroups/MyVisualStudioGroup/providers/Microsoft.Web/sites/myshoppingcart",
+    "appService.deploySubpath": ""
+}

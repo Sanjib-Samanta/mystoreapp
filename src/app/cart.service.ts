@@ -21,6 +21,13 @@ export class CartService {
     return this.items;
   }
 
+  getTotal() {
+    let total = 0;
+    this.items.forEach(item => {
+      total += item.Price;
+    });
+    return total;
+  }
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }

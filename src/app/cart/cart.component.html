@@ -4,9 +4,13 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of items">
-    <span>{{ item.name }}</span>
-    <span>{{ item.price | currency }}</span>
+    <span>{{ item.Name }}</span>
+    <span>{{ item.Price | currency }}</span>
 </div>
-
+<div *ngIf="total">
+  <p>
+    Total: {{ total }}
+  </p>
+</div>
 <button routerLink="/checkout">Proceed for Checkout</button>
 
